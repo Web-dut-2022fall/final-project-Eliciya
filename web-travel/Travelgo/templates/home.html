@@ -1,0 +1,120 @@
+<!--天气查询首页开屏-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ the_title }}</title>
+        <link rel="stylesheet" href="../static/weatherhome.css" />
+    <style>
+        body{border: none;}
+        h2{ text-align: center;
+            margin: 8% 10% 20% 10%;
+        color: #fafcff;
+        font-family: 华文琥珀;
+            border: none;
+    }
+        .button{margin: 8% 10% 20% 45%;}
+    </style>
+</head>
+<body>
+<h2>{{ the_title }}</h2>
+<div>
+  <!--svg样式-->
+<div class="wrapper">
+  <div class="sun"></div>
+  <div class="cloud">
+    <div class="cloud1">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="cloud1 c_shadow">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cloud_s">
+    <div class="cloud1">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="cloud1 c_shadow">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cloud_vs">
+    <div class="cloud1">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="cloud1 c_shadow">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <div class="haze"></div>
+  <div class="haze_stripe"></div>
+  <div class="haze_stripe"></div>
+  <div class="haze_stripe"></div>
+  <div class="thunder"></div>
+  <div class="rain">
+     <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+    </ul>
+  </div>
+  <div class="sleet">
+     <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+    </ul>
+  </div>
+  <!--svg样式描述-->
+  <div class="text">
+    <ul>
+      <li>Mostly Sunny</li>
+      <li>Partly Sunny</li>
+      <li>Partly Cloudy</li>
+      <li>Mostly Cloudy</li>
+      <li>Cloudy</li>
+      <li>Hazy</li>
+      <li>Thunderstorm</li>
+      <li>Rain</li>
+      <li>Sleet</li>
+    </ul>
+  </div>
+</div>
+  <!--跳转下一个页面-->
+<form method="get" action="/tianqizhanbu">
+<button class="button" type="submit">点此进入天气占卜屋</button>
+</form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--用户日志系统-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+            <title>{{ the_title }}</title>
+        <link rel="stylesheet" href="/static/base.css" />
+</head>
+<body>
+<h1>{{ the_title }}</h1>
+<table>
+    <tr>
+        {% for row_title in the_row_titles %}
+            <th>{{ row_title }}</th>
+        {% endfor %}
+    <th>用户提交</th>
+    <th>远程地址</th>
+    <th>访问代理</th>
+    <th>用户结果</th>
+    </tr>
+    {% for log_row in the_data %}
+        <tr>
+            {% for item in log_row %}
+               <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+     {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/*首页盒子*/
+.container {
+  position: relative;
+}
+.container .page-title, .container .page-sub-title {
+  color: white;
+  text-align: center;
+}
+.container .page-title {
+  margin: 30px 0 5px;
+  font-size: 30px;
+}
+.container .page-sub-title {
+  font-weight: 100;
+  margin: 0 0 30px 0;
+  font-size: 23px;
+}
+/*整体背景*/
+html {
+  background: linear-gradient(45deg, #4A3F80 10%, #0065A3 80%, #4A3F80);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+/*卡片*/
+.card-container {
+  perspective: 1000;
+  margin: 0 auto 50px;
+  width: 400px;
+}
+
+.front, .back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  transition-delay: 0.15s;
+  transition: 0;
+}
+/*卡片前面*/
+.front {
+  transform: rotateY(0deg);
+  background: #333741;
+}
+/*卡片后面*/
+.back {
+  transform: rotateY(180deg);
+  opacity: 0;
+  padding-top: 60px;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  background: #333741;
+  color: white;
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: #333741;
+  border-radius: 5px;
+  box-shadow: 0 40px 110px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+}
+/*卡片点击后的动画特效*/
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card:hover .front {
+  opacity: 0;
+}
+.card:hover .back {
+  opacity: 1;
+}
+/*文字部分*/
+.sub-title {
+  color: #0065A3;
+  -webkit-animation: slide-in 0.75s;
+          animation: slide-in 0.75s;
+  -webkit-animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+          animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+  -webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+          animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.title {
+  color: #fafcff;
+  -webkit-animation: slide-in-slow 0.75s;
+          animation: slide-in-slow 0.75s;
+  -webkit-animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+          animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+  -webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+          animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+  font-family: "幼圆", Times, serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 18px;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+/*按钮部分*/
+.synopsis {
+  color: mediumpurple;
+  font-size: 27px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+
+p {
+  font-family: "幼圆", Times, serif;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 0 0 38px;
+}
+
+.btn {
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+  background: transparent;
+  display: inline-block;
+  font-size: 17px;
+  padding: 8px 150px 9px 150px;
+  color: dodgerblue;
+  transition: 0.5s;
+  margin: 0 2px 0;
+  font-weight: 100;
+  position:absolute;
+  text-align: center;
+}
+.btn.secondary {
+  position:absolute;
+  text-align: center;
+  border-color: mediumpurple;
+  color: mediumpurple;
+}
+.btn.secondary:hover {
+  background: mediumpurple;
+}
+.btn:hover {
+  cursor: pointer;
+  background: dodgerblue;
+  color: white;
+}
+.btn i {
+  margin: 0 5px 0;
+}
+/*卡片背景图片*/
+.image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: slide-in-right 1.25s;
+          animation: slide-in-right 1.25s;
+  -webkit-animation: slide-in-right 1.25s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+          animation: slide-in-right 1.25s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+  -webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+          animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.3;
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slide-in-slow {
+  0% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  20% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slide-in-slow {
+  0% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  20% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    transform: translate3d(400px, 0, 0);
+  }
+  30% {
+    transform: translate3d(400px, 0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translate3d(400px, 0, 0);
+  }
+  30% {
+    transform: translate3d(400px, 0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

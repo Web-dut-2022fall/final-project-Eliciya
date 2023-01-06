@@ -1,0 +1,29 @@
+<!--天气查询-->
+{% extends 'base.html' %}
+
+{% block body %}
+      <div class="container-screen">
+
+      <div class="screen-items">
+
+        <div class="text">
+<h2>欢迎来到天气占卜屋~</h2>
+
+          <hr>
+<form method="POST" name="search">
+<p>您可以在这个表格里填入您想搜索的地区：</p><table>
+
+<tbody><tr><th colspan="2">== 天气占卜通行卡 ==</th></tr>
+<tr><td>城市：</td><td><input name="city" type="TEXT" width="60" placeholder="-请务必输入您想要占卜的地点噢-"></td></tr>
+</tbody></table>
+<p>如果您已经填好了，请选择你想要占卜的天气类型~</p>
+<button class="button" onclick="weather()"> 天气 </button>
+<button class="button" onclick="temperature()"> 温度 </button>
+<button class="button" onclick="winddirection()"> 风向 </button>
+<button class="button" onclick="windpower()"> 风力 </button>
+<button class="button" onclick="humidity()"> 湿度 </button>
+<button class="button" onclick="quanbu()"> 小孩子才做选择，我全都要知道 </button>
+</form>
+
+  </div>
+{% endblock %}

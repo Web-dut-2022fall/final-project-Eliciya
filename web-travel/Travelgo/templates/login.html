@@ -1,0 +1,42 @@
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>用户登录</title>
+		<link rel="stylesheet" href="../static/login.css" />
+	</head>
+	<body>
+	<script language="JavaScript">
+        function home(){
+        document.search.action="/home";
+        document.search.submit();
+    }
+    </script>
+		<div class="login">
+			<h2>用户登录</h2>
+			<div class="login_box">
+				<!-- required就是不能为空 必须在css效果中有很大的作用 -->
+				<!-- 可以简写为required -->
+				<form name="denglu" method='POST' action="/home">
+				<input name="name1" type="text" required /><label>用户名</label>
+			</div>
+			<div class="login_box">
+				<input type="password" required="required" /><label>密码</label>
+			</div>
+            <div class="login_box">
+				<input name="xingzuo" type="text" required="required" /><label>星座</label>
+			</div>
+<!--跳转下一个页面，为了传输数据，将a改为了button-->
+			<button class="button" onclick="home()"/> 登录 </button>
+            </form>
+		</br>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+            <p style="color: #fafcff;font-weight: bold;">星座指南：1.白羊座 2.金牛座 3.双子座 4.巨蟹座 5.狮子座 6.处女座 7.天枰座 8.天蝎座 9.射手座 10.摩羯座 11.水瓶座 12.双鱼座
+				</br>请填入序号噢~</p>
+		</div>
+	</body>
+</html>

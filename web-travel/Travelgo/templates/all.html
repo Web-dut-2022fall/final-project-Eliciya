@@ -1,0 +1,16 @@
+<!--天气查询——全部查询页面-->
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>占卜结果如下所示：</p>
+<table>
+<tr><td>城市：</td><td>{{ the_city }}</td></tr>
+</table>
+
+<p>在占卜 "{{the_city }}"时，返回结果如下所示：</p>
+<h3>{{ the_results }}</h3>
+<p>其中：province为查询省份, city是城市, weather是天气, temperature是温度, winddirection为风向, windpower是风力, humidity是湿度, reporttime是报道时间</p>
+{% endblock %}

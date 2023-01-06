@@ -1,0 +1,27 @@
+<!--路径查找结果页-->
+{% extends 'base.html' %}
+
+{% block body %}
+      <div class="container-screen">
+
+      <div class="screen-items">
+
+        <div class="text">
+<h2>{{ the_title }}</h2>
+<div class="icon cloudy">
+  <div class="cloudhh"></div>
+  <div class="cloudhh"></div>
+</div>
+<p>占卜结果如下所示：</p>
+<table style="border:8px double white;background: transparent;color: #fafcff">
+<tr><td> 起点：</td><td>{{ the_begin }}</td></tr>
+<tr><td> 终点：</td><td>{{ the_end }}</td></tr>
+<tr><td> 占卜结果：</td><td>{{ the_road }}</td></tr>
+</table>
+
+            <p>Travelgo给您提早拜个早年啦,祝您一路顺风哟~</p>
+ </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

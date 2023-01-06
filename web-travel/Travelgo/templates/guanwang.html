@@ -1,0 +1,51 @@
+<!--首页卡片样式-->
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='guanwang.css')}}">
+        <title> 欢迎来到Travelgo! </title>
+	</head>
+    <body>
+    <script language="JavaScript">
+    function zhuce(){
+        window.location.href = "/setup"
+    }
+    function login(){
+        window.location.href = "/login"
+    }
+</script>
+<div class="container">
+  <h1 class="page-title">
+    欢迎来到Travelgo!
+  </h1>
+  <h2 class="page-sub-title">鼠标移到travelgo通行卡上，即可领取通行通道哟~</h2>
+</div>
+<!--卡片前面的样式-->
+<div class="card-container">
+  <div class="card">
+    <div class="front">
+      <h2 class="sub-title">定制旅游计划</h2>
+      <h1 class="title">
+        那时，青年人不断思考，却什么答案也得不到，于是他们去流浪；这天，青年人不去思考，无数答案和观点就已将我们包围，于是我们去旅游。
+          ——《逍遥骑士》
+      </h1>
+<img class="image" src="{{ url_for('static', filename='frontcard.jpg')}}">
+    </div>
+      <!--卡片后面的样式-->
+    <div class="back">
+      <h3 class="synopsis">通行通道入口</h3>
+      <p>恭喜你~发现了通行入口！真有你的
+      </br>如果是新用户，请选择注册；如果是老朋友了，请选择登录。
+      </br>准备好了请按下方按钮，奇幻旅程即将开启。</p>
+        <!--进入下一个页面-->
+ <img class="image" src="{{ url_for('static', filename='backcard.jpg')}}">
+      <div class="btn" style="position:absolute;" onclick="login()"/><i class="fa fa-play" ></i>登录</div>
+      </br>
+      </br>
+      </br>
+      <div class="btn secondary" style="position:absolute;" onclick="zhuce()"/><i class="fa fa-heart "></i> 注册</div>
+    </div>
+  </div>
+    </body>
+</html>

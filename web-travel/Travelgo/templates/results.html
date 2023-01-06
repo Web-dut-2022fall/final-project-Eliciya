@@ -1,0 +1,26 @@
+<!--结果页面-->
+{% extends 'base.html' %}
+
+{% block body %}
+      <div class="container-screen">
+
+      <div class="screen-items">
+
+        <div class="text">
+<h2>{{ the_title }}</h2>
+<div class="icon cloudy">
+  <div class="cloudhh"></div>
+  <div class="cloudhh"></div>
+</div>
+<p>占卜结果如下所示：</p>
+<table style="border:8px double {{ the_color2 }};background: transparent;color: #fafcff">
+<tr><td style="bgcolor:{{ the_color1 }};border:4px dotted {{the_color2}}"> 城市：</td><td style="bgcolor:{{ the_color1 }};border:4px dotted {{the_color2}}">{{ the_city }}</td></tr>
+<tr><td style="bgcolor:{{ the_color1 }};border:4px dotted {{the_color2}}"> 占卜结果：</td><td style="bgcolor:{{ the_color1 }};border:4px dotted {{the_color2}}">{{ the_weather }}</td></tr>
+</table>
+
+<p>在占卜 "{{the_city }}"时，我们得到的天气结果是 "{{ the_weather }}",请大家根据天气状况添减衣物噢~</p>
+ </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

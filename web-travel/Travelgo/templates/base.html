@@ -1,0 +1,106 @@
+<!--后续页面的风格html模块-->
+<!doctype html>
+<html>
+    <head>
+        <title>{{ the_title }}</title>
+        <link rel="stylesheet" type="text/css" href="../static/base.css" />
+    </head>
+    <body>
+    <!--实现同一数据跳转不同页面的js 使用onclick标签-->
+    <script language=javascript>
+    function weather(){
+        document.search.action="/weathersearch";
+        document.search.submit();
+    }
+    function temperature() {
+        document.search.action = "/temperature";
+        document.search.submit();
+    }
+    function winddirection() {
+        document.search.action = "/winddirection";
+        document.search.submit();
+    }
+    function windpower() {
+        document.search.action = "/windpower";
+        document.search.submit();
+    }
+    function humidity() {
+        document.search.action = "/humidity";
+        document.search.submit();
+    }
+    function quanbu() {
+        document.search.action = "/quanbu";
+        document.search.submit();
+    }
+    function road() {
+        document.search.action = "/roadsearch";
+        document.search.submit();
+    }
+    function walk() {
+        document.search.action = "/walk";
+        document.search.submit();
+    }
+    function car() {
+        document.search.action = "/car";
+        document.search.submit();
+    }
+    function bike() {
+        document.search.action = "/bike";
+        document.search.submit();
+    }
+    </script>
+    <!--导航栏统一样式-->
+      <div class="fullwebpage">
+      <div>
+      <div class="nevigation">
+        <div class="profile">
+
+          <img src="https://gitee.com/shuimushisan/python_-travelgo_web/raw/master/picture/%E5%A4%B4%E5%83%8F.gif">
+          <h1> 今日大吉 </h1>
+
+          <h3 class="change-content">
+          </h3>
+
+        </div>
+
+        <div class="listitems">
+          <ul>
+            <li>
+
+              <a class="current" href="{{ url_for('homepage') }}">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                主页</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('view_the_log') }}"><i class="fa fa-user" aria-hidden="true"></i>日志系统</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('tianqizhanbu') }}">
+
+                <i class="fa fa-file-code-o" aria-hidden="true"></i>天气占卜</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('roadfind_page') }}"><i class="fa fa-briefcase" aria-hidden="true"></i>路径占卜</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('guanwang') }}"><i class="fa fa-telegram" aria-hidden="true"></i>退出</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      </div>
+
+        {% block body %}
+
+        {% endblock %}
+    </body>
+</html>

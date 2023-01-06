@@ -1,0 +1,27 @@
+<!--路径查找页面-->
+{% extends 'base.html' %}
+
+{% block body %}
+      <div class="container-screen">
+
+      <div class="screen-items">
+
+        <div class="text">
+<h2>{{ the_title }}</h2>
+<form method='POST' name="search">
+<table>
+<p>您可以在这个表格里填入您想查询的路线：填写实例（xx省xx市xx区...）</p>
+<tr><th colspan="2">== 路径占卜通行卡 ==</th></tr>
+<tr><td>起点：</td><td><input  name='begin' type='TEXT' width='60' placeholder="-请务必输入具体的起始点噢-" ></td></tr>
+<tr><td>终点：</td><td><input  name='end' type='TEXT' width='60' placeholder="-请务必输入具体的降落点噢-" ></td></tr>
+</table>
+<p>如果您已经填好了，选择您的出行工具，马上帮你选择路线~</p>
+<button class="button" onclick="walk()"/> 步行 </button>
+<button class="button" onclick="car()"/> 自驾 </button>
+<button class="button" onclick="bike()"/> 骑行 </button>
+</form>
+ </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

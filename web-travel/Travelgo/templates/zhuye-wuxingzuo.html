@@ -1,0 +1,101 @@
+<!--方便跳回主页面的副本，与yibiaopan.html结构相似-->
+<html lang="en">
+    <head>
+<script language="JavaScript">
+    function weatherfind(){
+        window.location.href = "/kaiping"
+    }
+    function roadfind(){
+        window.location.href = "/roadhome"
+    }
+</script>
+        <title>{{ the_title }}</title>
+      <!--引用bootstrap样式-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/yibiaopan.css" />
+         <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+
+  <title>{{ the_title }}</title>
+    </head>
+    <body>
+  <div class="fullwebpage">
+    <div>
+
+      <div class="nevigation">
+        <div class="profile">
+
+          <img src="https://gitee.com/shuimushisan/python_-travelgo_web/raw/master/picture/%E5%A4%B4%E5%83%8F.gif">
+          <h1> 今日大吉 </h1>
+
+          <h3 class="change-content">
+          </h3>
+
+        </div>
+
+        <div class="listitems">
+          <ul>
+            <li>
+
+              <a class="current" href="{{ url_for('homepage') }}">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                主页</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('view_the_log') }}"><i class="fa fa-user" aria-hidden="true"></i>日志系统</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('tianqizhanbu') }}">
+
+                <i class="fa fa-file-code-o" aria-hidden="true"></i>天气占卜</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('roadfind_page') }}"><i class="fa fa-briefcase" aria-hidden="true"></i>路径占卜</a>
+            </li>
+
+            <li>
+
+              <a href="{{ url_for('guanwang') }}"><i class="fa fa-telegram" aria-hidden="true"></i>退出</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="social-media">
+          <a target="_blank" href="https://www.facebook.com/"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a target="_blank" href="https://www.instagram.com/"> <i class="fa fa-instagram " aria-hidden="true"></i></a>
+          <a target="_blank" href="https://www.twitter.com/"> <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a target="_blank" href="https://www.github.com/"> <i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-screen">
+
+      <div class="screen-items">
+
+        <div class="text">
+          <h1>{{ the_topic }}</h1>
+
+          <hr>
+
+          <p>若想查看星座效果请登陆后查看哟~</p>
+          <div class="btn">
+            <button onclick="weatherfind()"/>天气占卜</button>
+            <button class="active" onclick="roadfind()"/>路径占卜</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    </body>
+</html>
